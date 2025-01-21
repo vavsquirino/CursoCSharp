@@ -1,4 +1,6 @@
-﻿namespace Ex009
+﻿using System.Diagnostics;
+
+namespace Ex009
 {
     internal class Program
     {
@@ -18,6 +20,18 @@
             if ((ladoA < ladoB + ladoC) && (ladoB < ladoA + ladoC) && (ladoC < ladoA + ladoB))
             {
                 Console.WriteLine("Os valores informados formam um triângulo");
+                if ((ladoA == ladoB) && (ladoB == ladoC))
+                {
+                Console.WriteLine("Ele é um triângulo equilátero");
+                }
+                else if ((ladoA == ladoB) || (ladoA == ladoC) || (ladoB == ladoC))
+                {
+                Console.WriteLine("E ele é um Triângulo Isósceles");
+                }
+                else
+                {
+                Console.WriteLine("E ele é um Triângulo Escaleno");
+                }
             }
             else 
             {
